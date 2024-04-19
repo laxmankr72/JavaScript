@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            color: gray;
+        }
+        .header{
+            position:relative;
+            background-color:darkgray;
+            height: 60px;
+        }
+        .header button{
+            position: absolute;
+            background-color: blanchedalmond;
+            border-radius: 5px;
+            height: 25px;
+            width: 80px;
+            top:50%;
+            right: 50%;
+            transform: translate(50%, -50%);
+        }
+        .main{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .btn{
+            margin: 10px;
+            height: 40px;
+            width: 80px;
+            border-radius: 5px;
+            color: green;
+        }
+
+        .h3{
+            position: absolute;
+            top: 50%; 
+            right: 50%; 
+            transform: translate(50%, -50%);
+        }
+        #blue{
+            background-color: blue;
+        }
+        #white{
+            background-color: white;
+        }
+        #black{
+            background-color: black;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        .para{
+            margin-top: -19rem;
+            margin-left: 32%;
+            margin-right: 32%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <button>Home</button>
+    </div>
+    <h3 class="color h3">Color Scheme Switcher</h3>
+    <div class="main">
+        
+        <button id="blue" class="color btn">Blue</button>
+        <button id="white" class="color btn">White</button>
+        <button id="black" class="color btn">Black</button>
+        <button id="yellow" class="color btn">Yellow</button> 
+        
+    </div>
+    <h3 class="para">Try clicking on one of the colours above to change the background color of the page!</h3>
+    <script src="colourSwitcher.js"></script>
+</body>
+</html>
