@@ -21,8 +21,9 @@ const scoreEle = document.querySelector('#score');
 
 questionEle.textContent = Question;
 
+const suffloption = shufflleOptions(options);
 // populating the Options div with the buttons 
-options.forEach((opt) =>{
+suffloption.forEach((opt) =>{
     // creating button and append to the option div
     const btn = document.createElement('button');
     btn.textContent = opt;
@@ -40,3 +41,14 @@ options.forEach((opt) =>{
         optionEle.textContent = '';
     });
 });
+
+//shuffling the options
+
+function shufflleOptions(options){
+    for(let i=options.length-1; i>=0; i--){
+        const j=Math.floor(Math.random()*i+1);
+        [options[i],options[j]]=[options[j],options[i]];
+    }
+    return options;
+}
+
